@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PatternLock</title>
 
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:linear-gradient(135deg,#4f46e5,#3b82f6);
+        }
+
+        .card{
+            width:380px;
+            background:white;
+            border-radius:20px;
+            padding:40px;
+            text-align:center;
+            box-shadow:0 15px 40px rgba(0,0,0,.2);
+        }
+
+        h1{
+            color:#333;
+            margin-bottom:15px;
+        }
+
+        p{
+            color:#666;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            display:block;
+            width:100%;
+            text-decoration:none;
+            background:#3b82f6;
+            color:white;
+            padding:15px;
+            border-radius:12px;
+            margin-top:15px;
+            font-weight:bold;
+            transition:.3s;
+        }
+
+        .btn:hover{
+            background:#2563eb;
+        }
+
+        footer{
+            margin-top:30px;
+            color:#888;
+            font-size:12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>PatternLock</h1>
+
+    <p>安全なパターン認証システム</p>
+
+    <a href="login.html" class="btn">ログイン</a>
+
+    <a href="register.html" class="btn">新規登録</a>
+
+    <footer>
+        Version 1.0.0
+    </footer>
+
+</div>
+
+</body>
+</html>
