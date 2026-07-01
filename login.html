@@ -1,48 +1,223 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ログイン | PatternLock</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/main.css">
+<title>ログイン | PatternLock</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
+
+body{
+background:#eef5ff;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.card{
+
+width:480px;
+max-width:100%;
+
+background:white;
+
+border-radius:25px;
+
+padding:35px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+}
+
+h1{
+
+text-align:center;
+
+color:#2563eb;
+
+margin-bottom:10px;
+
+}
+
+.description{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:30px;
+
+}
+
+.pattern{
+
+width:300px;
+
+height:300px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+position:relative;
+
+}
+
+.dot{
+
+width:60px;
+
+height:60px;
+
+margin:auto;
+
+border-radius:50%;
+
+background:#dbeafe;
+
+border:3px solid #60a5fa;
+
+cursor:pointer;
+
+transition:.2s;
+
+}
+
+.dot.active{
+
+background:#2563eb;
+
+transform:scale(1.1);
+
+}
+
+.message{
+
+margin-top:25px;
+
+height:24px;
+
+text-align:center;
+
+color:#ef4444;
+
+font-weight:bold;
+
+}
+
+.button{
+
+width:100%;
+
+padding:15px;
+
+margin-top:18px;
+
+border:none;
+
+border-radius:12px;
+
+font-size:17px;
+
+cursor:pointer;
+
+}
+
+.login{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+.reset{
+
+background:#f3f4f6;
+
+}
+
+.back{
+
+display:block;
+
+margin-top:25px;
+
+text-align:center;
+
+text-decoration:none;
+
+color:#2563eb;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="card">
 
-    <h1>PatternLock</h1>
+<h1>PatternLock</h1>
 
-    <p class="message">
-        パターンを入力してください
-    </p>
+<p class="description">
 
-    <div id="pattern-lock">
+パターンを入力してください
 
-        <svg id="pattern-lines"></svg>
+</p>
 
-        <div class="dot" data-id="1"></div>
-        <div class="dot" data-id="2"></div>
-        <div class="dot" data-id="3"></div>
+<div class="pattern">
 
-        <div class="dot" data-id="4"></div>
-        <div class="dot" data-id="5"></div>
-        <div class="dot" data-id="6"></div>
+<div class="dot" data-id="1"></div>
+<div class="dot" data-id="2"></div>
+<div class="dot" data-id="3"></div>
 
-        <div class="dot" data-id="7"></div>
-        <div class="dot" data-id="8"></div>
-        <div class="dot" data-id="9"></div>
+<div class="dot" data-id="4"></div>
+<div class="dot" data-id="5"></div>
+<div class="dot" data-id="6"></div>
 
-    </div>
+<div class="dot" data-id="7"></div>
+<div class="dot" data-id="8"></div>
+<div class="dot" data-id="9"></div>
 
-    <button id="loginButton">
-        ログイン
-    </button>
+</div>
 
-    <a href="index.html" class="back">
-        ← トップへ戻る
-    </a>
+<div class="message" id="message">
+
+</div>
+
+<button class="button login" id="loginButton">
+
+ログイン
+
+</button>
+
+<button class="button reset" id="resetButton">
+
+パターンをリセット
+
+</button>
+
+<a href="index.html" class="back">
+
+← トップへ戻る
+
+</a>
 
 </div>
 
