@@ -1,174 +1,52 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ログイン | PatternLock</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン | PatternLock</title>
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
-
-body{
-    background:linear-gradient(135deg,#4f46e5,#2563eb);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-
-.container{
-
-    width:420px;
-
-    background:white;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    text-align:center;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.25);
-
-}
-
-h1{
-
-    margin-bottom:10px;
-
-}
-
-p{
-
-    color:#666;
-
-    margin-bottom:25px;
-
-}
-
-.pattern{
-
-    width:270px;
-
-    height:270px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-.dot{
-
-    width:50px;
-
-    height:50px;
-
-    background:#d1d5db;
-
-    border-radius:50%;
-
-    margin:auto;
-
-    cursor:pointer;
-
-    transition:.2s;
-
-}
-
-.dot:hover{
-
-    background:#3b82f6;
-
-}
-
-button{
-
-    width:100%;
-
-    padding:15px;
-
-    margin-top:30px;
-
-    border:none;
-
-    background:#2563eb;
-
-    color:white;
-
-    font-size:18px;
-
-    border-radius:12px;
-
-    cursor:pointer;
-
-}
-
-button:hover{
-
-    background:#1d4ed8;
-
-}
-
-.back{
-
-    display:block;
-
-    margin-top:20px;
-
-    color:#2563eb;
-
-    text-decoration:none;
-
-}
-
-</style>
-
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
 <div class="container">
 
-<h1>PatternLock</h1>
+    <h1>PatternLock</h1>
 
-<p>パターンを入力してください</p>
+    <p class="message">
+        パターンを入力してください
+    </p>
 
-<div class="pattern">
+    <div id="pattern-lock">
 
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
+        <svg id="pattern-lines"></svg>
 
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
+        <div class="dot" data-id="1"></div>
+        <div class="dot" data-id="2"></div>
+        <div class="dot" data-id="3"></div>
 
-<div class="dot"></div>
-<div class="dot"></div>
-<div class="dot"></div>
+        <div class="dot" data-id="4"></div>
+        <div class="dot" data-id="5"></div>
+        <div class="dot" data-id="6"></div>
+
+        <div class="dot" data-id="7"></div>
+        <div class="dot" data-id="8"></div>
+        <div class="dot" data-id="9"></div>
+
+    </div>
+
+    <button id="loginButton">
+        ログイン
+    </button>
+
+    <a href="index.html" class="back">
+        ← トップへ戻る
+    </a>
 
 </div>
 
-<button>ログイン</button>
-
-<a href="index.html" class="back">
-
-トップへ戻る
-
-</a>
-
-</div>
+<script src="js/pattern.js"></script>
 
 </body>
 </html>
