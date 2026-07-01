@@ -1,87 +1,184 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PatternLock</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, sans-serif;
-        }
+<title>PatternLock</title>
 
-        body{
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            background:linear-gradient(135deg,#4f46e5,#3b82f6);
-        }
+<style>
 
-        .card{
-            width:380px;
-            background:white;
-            border-radius:20px;
-            padding:40px;
-            text-align:center;
-            box-shadow:0 15px 40px rgba(0,0,0,.2);
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Segoe UI",sans-serif;
+}
 
-        h1{
-            color:#333;
-            margin-bottom:15px;
-        }
+body{
 
-        p{
-            color:#666;
-            margin-bottom:30px;
-        }
+background:#eef5ff;
 
-        .btn{
-            display:block;
-            width:100%;
-            text-decoration:none;
-            background:#3b82f6;
-            color:white;
-            padding:15px;
-            border-radius:12px;
-            margin-top:15px;
-            font-weight:bold;
-            transition:.3s;
-        }
+min-height:100vh;
 
-        .btn:hover{
-            background:#2563eb;
-        }
+display:flex;
 
-        footer{
-            margin-top:30px;
-            color:#888;
-            font-size:12px;
-        }
-    </style>
+justify-content:center;
+
+align-items:center;
+
+}
+
+.container{
+
+width:450px;
+
+max-width:95%;
+
+background:white;
+
+border-radius:24px;
+
+padding:45px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.logo{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+}
+
+h1{
+
+color:#2563eb;
+
+font-size:38px;
+
+margin-bottom:10px;
+
+}
+
+.subtitle{
+
+color:#666;
+
+margin-bottom:40px;
+
+font-size:17px;
+
+}
+
+.button{
+
+display:block;
+
+width:100%;
+
+padding:16px;
+
+margin-top:18px;
+
+background:#2563eb;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:14px;
+
+font-size:18px;
+
+transition:.25s;
+
+}
+
+.button:hover{
+
+background:#1d4ed8;
+
+transform:translateY(-2px);
+
+}
+
+.info{
+
+margin-top:35px;
+
+font-size:14px;
+
+color:#888;
+
+}
+
+footer{
+
+margin-top:25px;
+
+font-size:12px;
+
+color:#aaa;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-    <h1>PatternLock</h1>
+<div class="logo">
 
-    <p>安全なパターン認証システム</p>
+🔒
 
-    <a href="login.html" class="btn">ログイン</a>
+</div>
 
-    <a href="register.html" class="btn">新規登録</a>
+<h1>
 
-    <footer>
-        Version 1.0.0
-    </footer>
+PatternLock
+
+</h1>
+
+<p class="subtitle">
+
+安全なパターン認証システム
+
+</p>
+
+<a class="button" href="login.html">
+
+ログイン
+
+</a>
+
+<a class="button" href="register.html">
+
+新規登録
+
+</a>
+
+<div class="info">
+
+ブラウザ・スマートフォン対応
+
+</div>
+
+<footer>
+
+Version 1.0.0
+
+</footer>
 
 </div>
 
 </body>
+
 </html>
