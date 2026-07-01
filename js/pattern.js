@@ -1,37 +1,79 @@
+// PatternLock Version 1.0
+
 const dots = document.querySelectorAll(".dot");
+const message = document.getElementById("message");
+const loginButton = document.getElementById("loginButton");
+const resetButton = document.getElementById("resetButton");
 
 let pattern = [];
+let isDrawing = false;
 
-dots.forEach(dot => {
+function addDot(dot){
 
-    dot.addEventListener("click", () => {
+    const id = dot.dataset.id;
 
-        const id = dot.dataset.id;
+    if(pattern.includes(id)){
+        return;
+    }
 
-        if(pattern.includes(id)){
-            return;
+    pattern.push(id);
+
+    dot.classList.add("active");
+
+}
+
+function clearPattern(){
+
+    pattern = [];
+
+    dots.forEach(dot=>{
+        dot.classList.remove("active");
+    });
+
+    message.textContent = "";
+
+}
+
+dots.forEach(dot=>{
+
+    dot.addEventListener("mousedown",()=>{
+
+        isDrawing = true;
+
+        addDot(dot);
+
+    });
+
+    dot.addEventListener("mouseenter",()=>{
+
+        if(isDrawing){
+
+            addDot(dot);
+
         }
-
-        pattern.push(id);
-
-        dot.classList.add("active");
-
-        console.log("現在のパターン:", pattern.join("-"));
 
     });
 
 });
 
-document.getElementById("loginButton").addEventListener("click", () => {
+document.addEventListener("mouseup",()=>{
+
+    isDrawing = false;
+
+});
+
+loginButton.addEventListener("click",()=>{
 
     if(pattern.length < 4){
 
-        alert("4点以上選択してください。");
+        message.textContent = "4点以上選択してください";
 
         return;
 
     }
 
-    alert("入力パターン: " + pattern.join("-"));
+    alert("入力されたパターン\n\n"+pattern.join("-"));
 
 });
+
+resetButton.addEventListener("click",clearPattern);
